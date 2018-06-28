@@ -9,7 +9,7 @@ import { Sale } from './Sale';
 })
 export class AppComponent {
   constructor(private http: HttpClient) {}
-  title = 'app';
+  title = 'Altuntaş';
 
   sales: Sale[] = [];
   ngOnInit(): void {
