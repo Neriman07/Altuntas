@@ -1,0 +1,34 @@
+
+
+<h2>Satıcılar</h2>
+<p>
+  <a routerLink="/seller-form" class="btn btn-primary text-white">Yeni Satıcı</a>
+</p>
+<table table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Ad</th>
+      <th>Logo</th>
+      <th>Açıklama</th>
+      <th>Eylemler</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sellers; let i=index">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.logo}}</td>
+      <td>{{item.description}}</td>
+      <td><a [routerLink]="['/seller-form',item.id]">Düzenle</a></td>
+
+
+
+
+    </tr>
+  </tbody>
+</table>
+

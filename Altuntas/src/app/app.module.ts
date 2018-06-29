@@ -2,14 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { SaleComponent } from './sale.component';
+import { SellerComponent } from './seller.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
+import { SellerFormComponent } from './seller-form-component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, SaleComponent, SellerComponent, SellerFormComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule,FormsModule, HttpClientModule, DataTablesModule, AppRoutingModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

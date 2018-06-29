@@ -1,20 +1,12 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Sale } from './Sale';
+import { Component } from '@angular/core'; //
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(private http: HttpClient) {}
+export class AppComponent { 
   title = 'Altuntaş';
-
-  sales: Sale[] = [];
-  ngOnInit(): void {
-    this.http.get("https://localhost:44315/api/sales").subscribe(data => { // api nin yolunu gösterdik
-      this.sales = data as Sale[];
-    });
-  }
+  
 }
